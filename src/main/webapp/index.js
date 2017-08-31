@@ -14881,13 +14881,13 @@ var ProfileForm = function (_Component) {
                         { className: 'input-group' },
                         _react2.default.createElement(
                             'button',
-                            { id: 'cancelProfile', onClick: this.onCancelProfileUpdate.bind(this), className: 'btn btn-warning glyphicon glyphicon-remove', type: 'button' },
-                            ' '
+                            { id: 'cancelProfile', onClick: this.onCancelProfileUpdate.bind(this), className: 'btn btn-warning', type: 'button' },
+                            'Cancel '
                         ),
                         _react2.default.createElement(
                             'button',
-                            { id: 'profile', onClick: this.onProfileUpdate.bind(this), className: 'btn btn-success glyphicon glyphicon-save' },
-                            ' '
+                            { id: 'profile', onClick: this.onProfileUpdate.bind(this), className: 'btn btn-success' },
+                            'Submit'
                         )
                     ),
                     _react2.default.createElement('br', null)
@@ -15038,7 +15038,7 @@ var SignInForm = function (_Component) {
                         ),
                         _react2.default.createElement(
                             'button',
-                            { id: 'signin', onClick: this.onSignin.bind(this), className: 'btn btn-success glyphicon glyphicon-log-in' },
+                            { id: 'signin', onClick: this.onSignin.bind(this), className: 'btn btn-success' },
                             'Submit '
                         )
                     )
