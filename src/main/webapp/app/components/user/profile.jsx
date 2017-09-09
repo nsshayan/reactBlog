@@ -132,9 +132,6 @@ class ProfileForm extends Component {
                    <br />
                 </div>
 
-                <div className="container col-lg-4 col-lg-offset-4" style={signOffStyle} >
-                    <span id="signOffLink" onClick={this.onProfileDelete.bind(this)} className="psw">Want to delete the account?:  <a href="#"> Sign off</a></span>
-                </div>
             </form>
         );
   }

@@ -138,17 +138,19 @@ class BlogViewForm extends Component {
 
         return (
             <form id="viewBlogForm" className="text-left">
-                <h2 className="text-center">Viewing Blog...</h2>
+                <h2 className="text-center">Viewing Blog</h2>
                 <div className="container  col-lg-4 col-lg-offset-4">
                     <br />
                     <div>
                         <input id="vblogId" style={hideStyle} readOnly></input>
                         Title :<input id="vblogTitle" style={inputStyle} readOnly></input>
+                    </div>
                         <br/>
+                    <div>
                         Category :<input type="text" id="vblogCategory" style={inputStyle} placeholder="Category" readOnly></input>
                     </div>
                     <br />
-                    Author ID :<input id="vblogAuthorId" style={hideStyle} readOnly></input><br/>
+                    <input id="vblogAuthorId" style={hideStyle} readOnly></input><br/>
                     by <br/>Author Name :<input id="vblogAuthName" style={inputStyle} placeholder="Author" readOnly></input>
                     <br/>
                     Data :<textarea id="vblogText" className="form-control" rows="10" placeholder="blog text ..." readOnly></textarea>
@@ -165,13 +167,13 @@ class BlogViewForm extends Component {
                         </ul>
                         {this.state.showNewCommentForm ? <NewCommentForm /> : null}
                         <a href="#" id="commentsFirstPage" onClick={this.moveToFirstPage.bind(this)} className="glyphicon glyphicon-home"> </a>  |  <a href="#" id="commentsPrevPage" onClick={this.moveToPrevPage.bind(this)} className="glyphicon glyphicon-circle-arrow-left"> </a>  |  <a href="#" id="commentsNextPage" onClick={this.moveToNextPage.bind(this)} className="glyphicon glyphicon-circle-arrow-right"> </a>  |  <a>  </a>
-                        <button id="addCommentBtn" onClick={this.onAddComment.bind(this)} className = "btn btn-primary glyphicon glyphicon-plus btn-xs"> </button>
+                        <button id="addCommentBtn" onClick={this.onAddComment.bind(this)} className = "btn btn-primary">Add Comment</button>    
                     </div>
                     <br />
                     <div className="input-group">
-                        <button id="cancelBlogView" onClick={this.onCancel.bind(this)} className="btn btn-warning glyphicon glyphicon-remove cancelbtn"> </button>
-                        <button id="veditBlog" onClick={this.onEdit.bind(this)} className="btn btn-success glyphicon glyphicon-pencil"> </button>
-                        <button id="vdeleteBlog" onClick={this.onDelete.bind(this)} className="btn btn-danger glyphicon glyphicon-trash"> </button>
+                        <button id="cancelBlogView" onClick={this.onCancel.bind(this)} className="btn btn-warning">Cancel </button>
+                        <button id="veditBlog" onClick={this.onEdit.bind(this)} className="btn btn-success">Edit </button>
+                        <button id="vdeleteBlog" onClick={this.onDelete.bind(this)} className="btn btn-danger">Delete </button>
                     </div>
                 </div>
             </form>
@@ -279,10 +281,8 @@ class BlogViewForm extends Component {
         var comment = comments[index];
         console.log(comment);
 
-        return  "<div><input id=\"commentText" + index + "\" value=\"" + comment.commentText + "\"></input>"
+        return  "<div><input id=\"commentText" + index + "\" value=\"" + comment.commentText + "\" readonly></input>"
         + " by <input style=\"outline: none; border: none;\" id=\"cuserId" + index + "\" value=" + comment.addedBy + " readonly></input>"
-        + "<br /><button id=\"saveComment" + index + "\" class=\"btn btn-success glyphicon glyphicon-save btn-xs \"> </button>"
-        + "<button id=\"deleteComment" + index + "\" class=\"btn btn-danger glyphicon glyphicon-trash btn-xs \"> </button>"
         + "<input id=\"commentId" + index + "\" value=" + comment.commentId + " style=\"display:none\"></input>"
         + "<input id=\"cblogId" + index + "\" value=" + comment.blog + " style=\"display:none\" readonly></input>"
         + "</div><br/>"

@@ -27,6 +27,7 @@ public class MongoBlogsDAO extends BasicDAO<Blog, Long> implements BlogsDAO {
     public void create(Blog blog) {
         ObjectId _id = new ObjectId();
         blog.setBlogId(_id.toHexString());
+        System.out.print(blog);
         save(blog);
     }
 
@@ -62,6 +63,7 @@ public class MongoBlogsDAO extends BasicDAO<Blog, Long> implements BlogsDAO {
             throw new IllegalArgumentException();
         FindOptions options = getFindOptions(pageNum);
         List<Blog> blogs = createQuery().order("-lastUpdatedOn").asList(options);
+        System.out.println(blogs);
         return blogs;
     }
 

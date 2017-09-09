@@ -138,9 +138,9 @@ class BlogEditForm extends Component {
                     <br />
                     <img src="./images/linesep-short.png"  className="seperators"></img>
                     <div className="input-group">
-                        <button id="cancelBlogEdit" onClick={this.onCancel.bind(this)} className="btn btn-warning glyphicon glyphicon-remove cancelbtn" type="button"> </button>
-                        <button id="esaveBlog" onClick={this.onSave.bind(this)} className="btn btn-success glyphicon glyphicon-save"> </button>
-                        <button id="edeleteBlog" onClick={this.onDelete.bind(this)} className="btn btn-danger glyphicon glyphicon-trash" > </button>
+                        <button id="cancelBlogEdit" onClick={this.onCancel.bind(this)} className="btn btn-warning" type="button">Cancel </button>
+                        <button id="esaveBlog" onClick={this.onSave.bind(this)} className="btn btn-success">Save </button>
+                        <button id="edeleteBlog" onClick={this.onDelete.bind(this)} className="btn btn-danger" >Delete </button>
                     </div>
                 </div>
             </form>

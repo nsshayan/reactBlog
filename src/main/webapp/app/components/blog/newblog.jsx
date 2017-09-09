@@ -70,20 +70,23 @@ class NewBlogForm extends Component {
 
         return (
             <form id="newBlogForm" className="text-left">
-                <h2 className="text-center">New Blog. </h2>
+                <h2 className="text-center">Add Blog</h2>
                 <div className="container  col-lg-4 col-lg-offset-4">
                     <br />
                     <div>
                         Title :<input id="nblogTitle" placeholder="New blog title "></input>
                         <br/>
+                    </div>
+                    <div>
                         Category :<input type="text" name="blogCategory" id="nblogCategory" placeholder="Category"></input>
                     </div>
                     <br />
                     Data :<textarea id="nblogText" className="form-control" rows="10" placeholder="blog text ..." required></textarea>
                     <br />
                     <div className="input-group">
-                        <button id="cancelBlogAdd" onClick={this.onCancel.bind(this)} className="btn btn-warning " type="button">Submit </button>
-                        <button id="ncreateBlog" onClick={this.onCreate.bind(this)} className="btn btn-success" >Cancel</button>
+                        <button id="cancelBlogAdd" onClick={this.onCancel.bind(this)} className="btn btn-warning " type="button">Cancel </button>
+                        <button id="ncreateBlog" onClick={this.onCreate.bind(this)} className="btn btn-success" type="button">Submit
+                        </button>
                     </div>
                 </div>
             </form>

@@ -70,9 +70,9 @@ class HomeForm extends Component {
         + " style=\"display:none\" readonly></input>"
         + "<b id=\"lblogTitle" + index + "\">"
         + blog.title
-        + " </b></div><button class=\"btn btn-info glyphicon glyphicon-pencil btn-xs\" id=\"leditBlog" + index + "\">Edit</button><button "
-        + "id=\"lviewBlog" + index + "\" class=\"btn btn-success glyphicon glyphicon-eye-open btn-xs\">View</button><button "
-        + " class=\"btn btn-danger glyphicon glyphicon-trash btn-xs\" id=\"ldeleteBlog" + index + "\">Delete</button>"
+        + " </b></div><button class=\"btn btn-info  btn-xs\" id=\"leditBlog" + index + "\">Edit</button><button "
+        + "id=\"lviewBlog" + index + "\" class=\"btn btn-success  btn-xs\">View</button><button "
+        + " class=\"btn btn-danger btn-xs\" id=\"ldeleteBlog" + index + "\">Delete</button>"
         + "</br><input style=\"outline: none; border: none;\" type=\"text\" id=\"lblogCategory" + index + "\" value=\""
         + blog.category + "\""
         + " readonly></input>"

@@ -62,8 +62,8 @@ class NewCommentForm extends Component {
             <div id="blogCommentForm" className="text-left">
                 <div>
                     <input id="bcfText" placeholder="comment text ... "></input>
-                    <button id="bcfSave"  onClick={this.onCreate.bind(this)} className="btn btn-success glyphicon glyphicon-save"> </button>
-                    <button id="bcfCancel" onClick={this.onCancel.bind(this)} className="btn btn-warning glyphicon glyphicon-remove"> </button>
+                    <button id="bcfSave"  onClick={this.onCreate.bind(this)} className="btn btn-success">Save </button>
+                    <button id="bcfCancel" onClick={this.onCancel.bind(this)} className="btn btn-warning">Cancel </button>
                 </div>
                 <br />
             </div>

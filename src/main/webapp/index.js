@@ -8337,7 +8337,7 @@ var HomeForm = function (_Component) {
         value: function getBlogHtml(blogs, index) {
             console.log("getBlogHtml");
             var blog = blogs[index];
-            return "<div><br/><div><input id=\"lblogId" + index + "\" value=\"" + blog.blogId + "\"" + " style=\"display:none\" readonly></input>" + "<b id=\"lblogTitle" + index + "\">" + blog.title + " </b></div><button class=\"btn btn-info glyphicon glyphicon-pencil btn-xs\" id=\"leditBlog" + index + "\">Edit</button><button " + "id=\"lviewBlog" + index + "\" class=\"btn btn-success glyphicon glyphicon-eye-open btn-xs\">View</button><button " + " class=\"btn btn-danger glyphicon glyphicon-trash btn-xs\" id=\"ldeleteBlog" + index + "\">Delete</button>" + "</br><input style=\"outline: none; border: none;\" type=\"text\" id=\"lblogCategory" + index + "\" value=\"" + blog.category + "\"" + " readonly></input>" + "<br/><input id=\"lblogAuthorId" + index + "\"  value=\"" + blog.author.userId + "\"" + " style=\"display:none\" readonly></input>written by <input style=\"outline: none; border: none;\" id=\"lblogAuthName" + index + "\"  value=\"" + blog.author.firstName + " " + blog.author.lastName + "\"" + " readonly></input>" + "<div><textarea style=\"outline: none; border: none;\" id=\"lblogText" + index + "\"  class=\"form-control\" rows=\"5\" readonly required>" + blog.blogText + "</textarea>" + "</div><br/></div>";
+            return "<div><br/><div><input id=\"lblogId" + index + "\" value=\"" + blog.blogId + "\"" + " style=\"display:none\" readonly></input>" + "<b id=\"lblogTitle" + index + "\">" + blog.title + " </b></div><button class=\"btn btn-info  btn-xs\" id=\"leditBlog" + index + "\">Edit</button><button " + "id=\"lviewBlog" + index + "\" class=\"btn btn-success  btn-xs\">View</button><button " + " class=\"btn btn-danger btn-xs\" id=\"ldeleteBlog" + index + "\">Delete</button>" + "</br><input style=\"outline: none; border: none;\" type=\"text\" id=\"lblogCategory" + index + "\" value=\"" + blog.category + "\"" + " readonly></input>" + "<br/><input id=\"lblogAuthorId" + index + "\"  value=\"" + blog.author.userId + "\"" + " style=\"display:none\" readonly></input>written by <input style=\"outline: none; border: none;\" id=\"lblogAuthName" + index + "\"  value=\"" + blog.author.firstName + " " + blog.author.lastName + "\"" + " readonly></input>" + "<div><textarea style=\"outline: none; border: none;\" id=\"lblogText" + index + "\"  class=\"form-control\" rows=\"5\" readonly required>" + blog.blogText + "</textarea>" + "</div><br/></div>";
         }
     }, {
         key: 'setBlogsInnerHtml',
@@ -13569,18 +13569,18 @@ var BlogEditForm = function (_Component) {
                         { className: 'input-group' },
                         _react2.default.createElement(
                             'button',
-                            { id: 'cancelBlogEdit', onClick: this.onCancel.bind(this), className: 'btn btn-warning glyphicon glyphicon-remove cancelbtn', type: 'button' },
-                            ' '
+                            { id: 'cancelBlogEdit', onClick: this.onCancel.bind(this), className: 'btn btn-warning', type: 'button' },
+                            'Cancel '
                         ),
                         _react2.default.createElement(
                             'button',
-                            { id: 'esaveBlog', onClick: this.onSave.bind(this), className: 'btn btn-success glyphicon glyphicon-save' },
-                            ' '
+                            { id: 'esaveBlog', onClick: this.onSave.bind(this), className: 'btn btn-success' },
+                            'Save '
                         ),
                         _react2.default.createElement(
                             'button',
-                            { id: 'edeleteBlog', onClick: this.onDelete.bind(this), className: 'btn btn-danger glyphicon glyphicon-trash' },
-                            ' '
+                            { id: 'edeleteBlog', onClick: this.onDelete.bind(this), className: 'btn btn-danger' },
+                            'Delete '
                         )
                     )
                 )
@@ -13794,7 +13794,7 @@ var BlogViewForm = function (_Component) {
                 _react2.default.createElement(
                     'h2',
                     { className: 'text-center' },
-                    'Viewing Blog...'
+                    'Viewing Blog'
                 ),
                 _react2.default.createElement(
                     'div',
@@ -13805,13 +13805,16 @@ var BlogViewForm = function (_Component) {
                         null,
                         _react2.default.createElement('input', { id: 'vblogId', style: hideStyle, readOnly: true }),
                         'Title :',
-                        _react2.default.createElement('input', { id: 'vblogTitle', style: inputStyle, readOnly: true }),
-                        _react2.default.createElement('br', null),
+                        _react2.default.createElement('input', { id: 'vblogTitle', style: inputStyle, readOnly: true })
+                    ),
+                    _react2.default.createElement('br', null),
+                    _react2.default.createElement(
+                        'div',
+                        null,
                         'Category :',
                         _react2.default.createElement('input', { type: 'text', id: 'vblogCategory', style: inputStyle, placeholder: 'Category', readOnly: true })
                     ),
                     _react2.default.createElement('br', null),
-                    'Author ID :',
                     _react2.default.createElement('input', { id: 'vblogAuthorId', style: hideStyle, readOnly: true }),
                     _react2.default.createElement('br', null),
                     'by ',
@@ -13865,8 +13868,8 @@ var BlogViewForm = function (_Component) {
                         ),
                         _react2.default.createElement(
                             'button',
-                            { id: 'addCommentBtn', onClick: this.onAddComment.bind(this), className: 'btn btn-primary glyphicon glyphicon-plus btn-xs' },
-                            ' '
+                            { id: 'addCommentBtn', onClick: this.onAddComment.bind(this), className: 'btn btn-primary' },
+                            'Add Comment'
                         )
                     ),
                     _react2.default.createElement('br', null),
@@ -13875,18 +13878,18 @@ var BlogViewForm = function (_Component) {
                         { className: 'input-group' },
                         _react2.default.createElement(
                             'button',
-                            { id: 'cancelBlogView', onClick: this.onCancel.bind(this), className: 'btn btn-warning glyphicon glyphicon-remove cancelbtn' },
-                            ' '
+                            { id: 'cancelBlogView', onClick: this.onCancel.bind(this), className: 'btn btn-warning' },
+                            'Cancel '
                         ),
                         _react2.default.createElement(
                             'button',
-                            { id: 'veditBlog', onClick: this.onEdit.bind(this), className: 'btn btn-success glyphicon glyphicon-pencil' },
-                            ' '
+                            { id: 'veditBlog', onClick: this.onEdit.bind(this), className: 'btn btn-success' },
+                            'Edit '
                         ),
                         _react2.default.createElement(
                             'button',
-                            { id: 'vdeleteBlog', onClick: this.onDelete.bind(this), className: 'btn btn-danger glyphicon glyphicon-trash' },
-                            ' '
+                            { id: 'vdeleteBlog', onClick: this.onDelete.bind(this), className: 'btn btn-danger' },
+                            'Delete '
                         )
                     )
                 )
@@ -14000,7 +14003,7 @@ var BlogViewForm = function (_Component) {
             var comment = comments[index];
             console.log(comment);
 
-            return "<div><input id=\"commentText" + index + "\" value=\"" + comment.commentText + "\"></input>" + " by <input style=\"outline: none; border: none;\" id=\"cuserId" + index + "\" value=" + comment.addedBy + " readonly></input>" + "<br /><button id=\"saveComment" + index + "\" class=\"btn btn-success glyphicon glyphicon-save btn-xs \"> </button>" + "<button id=\"deleteComment" + index + "\" class=\"btn btn-danger glyphicon glyphicon-trash btn-xs \"> </button>" + "<input id=\"commentId" + index + "\" value=" + comment.commentId + " style=\"display:none\"></input>" + "<input id=\"cblogId" + index + "\" value=" + comment.blog + " style=\"display:none\" readonly></input>" + "</div><br/>";
+            return "<div><input id=\"commentText" + index + "\" value=\"" + comment.commentText + "\" readonly></input>" + " by <input style=\"outline: none; border: none;\" id=\"cuserId" + index + "\" value=" + comment.addedBy + " readonly></input>" + "<input id=\"commentId" + index + "\" value=" + comment.commentId + " style=\"display:none\"></input>" + "<input id=\"cblogId" + index + "\" value=" + comment.blog + " style=\"display:none\" readonly></input>" + "</div><br/>";
         }
     }, {
         key: 'fillComments',
@@ -14216,7 +14219,7 @@ var NewBlogForm = function (_Component) {
                 _react2.default.createElement(
                     'h2',
                     { className: 'text-center' },
-                    'New Blog. '
+                    'Add Blog'
                 ),
                 _react2.default.createElement(
                     'div',
@@ -14227,7 +14230,11 @@ var NewBlogForm = function (_Component) {
                         null,
                         'Title :',
                         _react2.default.createElement('input', { id: 'nblogTitle', placeholder: 'New blog title ' }),
-                        _react2.default.createElement('br', null),
+                        _react2.default.createElement('br', null)
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        null,
                         'Category :',
                         _react2.default.createElement('input', { type: 'text', name: 'blogCategory', id: 'nblogCategory', placeholder: 'Category' })
                     ),
@@ -14241,12 +14248,12 @@ var NewBlogForm = function (_Component) {
                         _react2.default.createElement(
                             'button',
                             { id: 'cancelBlogAdd', onClick: this.onCancel.bind(this), className: 'btn btn-warning ', type: 'button' },
-                            'Submit '
+                            'Cancel '
                         ),
                         _react2.default.createElement(
                             'button',
-                            { id: 'ncreateBlog', onClick: this.onCreate.bind(this), className: 'btn btn-success' },
-                            'Cancel'
+                            { id: 'ncreateBlog', onClick: this.onCreate.bind(this), className: 'btn btn-success', type: 'button' },
+                            'Submit'
                         )
                     )
                 )
@@ -14891,20 +14898,6 @@ var ProfileForm = function (_Component) {
                         )
                     ),
                     _react2.default.createElement('br', null)
-                ),
-                _react2.default.createElement(
-                    'div',
-                    { className: 'container col-lg-4 col-lg-offset-4', style: signOffStyle },
-                    _react2.default.createElement(
-                        'span',
-                        { id: 'signOffLink', onClick: this.onProfileDelete.bind(this), className: 'psw' },
-                        'Want to delete the account?:  ',
-                        _react2.default.createElement(
-                            'a',
-                            { href: '#' },
-                            ' Sign off'
-                        )
-                    )
                 )
             );
         }
@@ -15410,13 +15403,13 @@ var NewCommentForm = function (_Component) {
                     _react2.default.createElement('input', { id: 'bcfText', placeholder: 'comment text ... ' }),
                     _react2.default.createElement(
                         'button',
-                        { id: 'bcfSave', onClick: this.onCreate.bind(this), className: 'btn btn-success glyphicon glyphicon-save' },
-                        ' '
+                        { id: 'bcfSave', onClick: this.onCreate.bind(this), className: 'btn btn-success' },
+                        'Save '
                     ),
                     _react2.default.createElement(
                         'button',
-                        { id: 'bcfCancel', onClick: this.onCancel.bind(this), className: 'btn btn-warning glyphicon glyphicon-remove' },
-                        ' '
+                        { id: 'bcfCancel', onClick: this.onCancel.bind(this), className: 'btn btn-warning' },
+                        'Cancel '
                     )
                 ),
                 _react2.default.createElement('br', null)
