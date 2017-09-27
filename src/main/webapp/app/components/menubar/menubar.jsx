@@ -46,7 +46,7 @@ class MenuBar extends Component {
                 <span className="icon-bar"></span>
                 <span className="icon-bar"></span>
               </button>
-              <a className="navbar-brand" href="#home" id="homeMenu" onClick={this.onHome.bind(this)}> CMAD Blog</a>
+              <a className="navbar-brand" href="#home" id="homeMenu" onClick={this.onHome.bind(this)}> CMAD Blog Phase 2</a>
             </div>
             <div className="collapse navbar-collapse" id="myNavbar">
                 <ul className="nav navbar-nav">
